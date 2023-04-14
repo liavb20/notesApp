@@ -8,7 +8,8 @@ Download the main folder to your computer
 enter to  the backend folder by
 
 ```bash
-cd backend```
+cd backend
+```
 
 and run 
 
