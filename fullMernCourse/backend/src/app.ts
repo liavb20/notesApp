@@ -8,16 +8,16 @@ import session from 'express-session';
 import env from './util/validateEnv'
 import MongoStore from 'connect-mongo';
 import { requiresAuth } from './middleware/auth';
-import cors from 'cors';
+// import cors from 'cors';
 
 const app = express();
 
-app.use(cors());
+// app.use(cors());
 
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    next();
-  });
+// app.use((req, res, next) => {
+//     res.header('Access-Control-Allow-Origin', '*');
+//     next();
+//   });
 
 app.use(morgan('dev'));
 
@@ -37,7 +37,9 @@ app.use(session({
 }));
 
 app.use("/api/users", userRoutes);
-app.use("/api/notes", requiresAuth ,notesRoutes);
+app.use("/api/notes", 
+requiresAuth ,
+notesRoutes);
 
 app.use((req, res, next) => {
     next(createHttpError(404, "endpoint not found"))
