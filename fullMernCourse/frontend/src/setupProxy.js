@@ -5,6 +5,7 @@ module.exports = function(app) {
     '/api',
     createProxyMiddleware({
       target: "https://liav-notes-api.onrender.com",
+    //   target: "http://localhost:5000",
       changeOrigin: true,
     })
   );
