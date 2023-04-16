@@ -4,7 +4,7 @@ const baseURL =
 'https://liav-notes-api.onrender.com'
 //  'http://localhost:5000'
 export async function fetchData(input: RequestInfo, init?: RequestInit) {
-    const response = await fetch(baseURL + input, init);
+    const response = await fetch(baseURL + input, {...init, credentials:"include"});
     if (response.ok) return response
     else {
         const errorBody = await response.json();

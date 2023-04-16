@@ -14,15 +14,9 @@ const app = express();
 
 
 app.use(cors({
-    origin: '*',
+    origin: 'https://liav-notes-app.onrender.com',
     credentials: true,
 }));
-
-
-// app.use((req, res, next) => {
-//     res.header('Access-Control-Allow-Origin', '*');
-//     next();
-//   });
 
 app.use(morgan('dev'));
 
