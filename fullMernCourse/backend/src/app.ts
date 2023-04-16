@@ -32,7 +32,9 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
     cookie: {
-        maxAge: 60*60*1000
+        maxAge: 60*60*1000,
+        sameSite: 'none', // in order to response to both first-party and cross-site requests
+        secure: 'auto', // it should set automatically to secure if is https
     }, 
     rolling: true,
     store: MongoStore.create({
