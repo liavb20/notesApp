@@ -4,7 +4,6 @@ import mongoose from "mongoose";
 import NoteModel from '../models/note'
 import { assertIsDefined } from "../util/assertIsDefined";
 
-
 interface createNoteBody{
     title?: string,
     text?: string
