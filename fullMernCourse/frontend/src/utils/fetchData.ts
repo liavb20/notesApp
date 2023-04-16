@@ -1,7 +1,7 @@
 import { ConflictError, UnauthorizedError } from "../errors/http_errors";
 
 export async function fetchData(input: RequestInfo, init?: RequestInit) {
-    const response = await fetch(input, init);
+    const response = await fetch(`https://liav-notes-api.onrender.com${input}`, init);
     if (response.ok) return response
     else {
         const errorBody = await response.json();
