@@ -28,7 +28,8 @@ export async function updateNote(noteId: string, note: NoteInput): Promise<Note>
         headers:{
             "Content-Type":"application/json"
         },
-        body: JSON.stringify(note)
+        body: JSON.stringify(note),
+        credentials: "include"
     });
     return response.json();
 }
