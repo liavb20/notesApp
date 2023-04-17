@@ -2,7 +2,7 @@
 
 Notes App is a react application that users can manage their notes 
 
-Deployed version is available here [https://liav-notes-app.onrender.com/] 
+[Deployed version is available here](https://liav-notes-app.onrender.com/) 
 
 ## installation 
 
